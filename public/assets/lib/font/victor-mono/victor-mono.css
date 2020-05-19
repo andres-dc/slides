@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Victor Mono';
+    src: url('VictorMono-Regular.eot');
+    src: url('VictorMono-Regular.eot?#iefix') format('embedded-opentype'),
+         url('VictorMono-Regular.woff') format('woff'),
+         url('VictorMono-Regular.ttf') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+}
