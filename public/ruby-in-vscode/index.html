@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/reveal.css" />
+    <link rel="stylesheet" href="../assets/css/theme/white.css" />
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../assets/lib/css/zenburn.css" />
+    <title>Ruby in VSCode</title>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-background-color="#FFE7BD" data-markdown>
+          <textarea data-template>
+            ## Autocomplete and Linting for Ruby in VSCode
+          </textarea>
+        </section>
+        
+        <section data-background-color="#FFE7BD" data-markdown>
+          <textarea data-template>
+            ## Autocomplete
+            A feature that predicts what the user is going to type based on what was already typed.
+
+            <img src="images/autocomplete-vscode.png" alt="Autocomplete in VSCode">
+          </textarea>
+        </section>
+
+        <section data-background-color="#FFE7BD" data-markdown>
+          <textarea data-template>
+            ## Linting
+            Tool that analyzes source code and detects errors, bugs and style errors.
+
+            <img src="images/lint-vscode.png" alt="Linter in VSCode">
+          </textarea>
+        </section>
+
+        <section data-background-color="#FFE7BD" data-markdown>
+          <textarea data-template>
+            ## Style Guide
+            A manual that stablishes writing conventions.
+          </textarea>
+        </section>
+
+        <section data-background-color="#FFE7BD" data-markdown>
+          <textarea data-template>
+            ## Installation - Gems (1/2)
+
+            Solargraph - [solargraph.org](https://solargraph.org)
+            
+            Rubocop - [docs.rubocop.org](https://docs.rubocop.org)
+            
+            RuboCop Airbnb - [github.com/airbnb/ruby/tree/master/rubocop-airbnb](https://github.com/airbnb/ruby/tree/master/rubocop-airbnb)
+
+            <pre><code data-trim data-noescape class="bash">
+              gem install solargraph rubocop-airbnb
+            </code></pre>
+          </textarea>
+        </section>
+
+        <section data-background-color="#FFE7BD" data-markdown>
+          <textarea data-template>
+            ## Installation - VSCode (2/2)
+
+            [Ruby](https://marketplace.visualstudio.com/items?itemName=rebornix.Ruby)
+            
+            [Ruby Solargraph](https://marketplace.visualstudio.com/items?itemName=castwide.solargraph)
+          </textarea>
+        </section>
+
+        <section data-background-color="#FFE7BD" data-markdown>
+          <textarea data-template>
+            ## Configure VSCode
+          </textarea>
+        </section>
+
+        <section data-background-color="#FFE7BD" data-markdown>
+          <textarea data-template>
+          #### settings.json
+          ```json
+          "ruby.intellisense": "rubyLocate",
+          "ruby.interpreter.commandPath": "/home/<username>/.rbenv/shims/ruby",
+          "ruby.useLanguageServer": true,
+          "ruby.useBundler": true,
+
+          "solargraph.commandPath": "/home/<username>/.rbenv/shims/solargraph",
+          "solargraph.formatting": true,
+          "solargraph.diagnostics": true,
+          "[ruby]": {
+            "editor.defaultFormatter": "castwide.solargraph"
+          },
+          ```
+          </textarea>
+        </section>
+
+        <section data-background-color="#FFE7BD" data-markdown>
+          <textarea data-template>
+            ## Live Demo Time
+          </textarea>
+        </section>
+      </div>
+    </div>
+    <script src="../assets/js/reveal.js"></script>
+    <!-- <script src="../assets/plugin/markdown/marked.js"></script>
+    <script src="../assets/plugin/markdown/markdown.js"></script> -->
+    <script>
+      Reveal.initialize({
+        controls: false,
+        slideNumber: false,
+        hash: true,
+
+        dependencies: [
+          {
+            src: '../assets/plugin/markdown/marked.js',
+            condition: function () {
+              return !!document.querySelector('[data-markdown]');
+            }
+          },
+          {
+            src: '../assets/plugin/markdown/markdown.js',
+            condition: function () {
+              return !!document.querySelector('[data-markdown]');
+            }
+          },
+          { src: '../assets/plugin/highlight/highlight.js', async: true },
+          { src: '../assets/plugin/search/search.js', async: true },
+          { src: '../assets/plugin/zoom-js/zoom.js', async: true },
+          { src: '../assets/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+  </body>
+</html>
