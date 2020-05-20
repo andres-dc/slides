@@ -98,17 +98,28 @@
           <textarea data-template>
           #### settings.json
           ```json
-          "ruby.interpreter.commandPath": "/home/adc/.rbenv/shims/ruby",
+          "ruby.interpreter.commandPath": "/home/<user>/.rbenv/shims/ruby",
           "ruby.useLanguageServer": true,
           "ruby.useBundler": true,
 
-          "solargraph.commandPath": "/home/adc/.rbenv/shims/solargraph",
+          "solargraph.commandPath": "/home/<user>/.rbenv/shims/solargraph",
           "solargraph.formatting": true,
           "solargraph.diagnostics": true,
           "[ruby]": {
             "editor.defaultFormatter": "castwide.solargraph"
           },
-        
+          ```
+          </textarea>
+        </section>
+
+        <section data-background-color="#FFE7BD" data-markdown>
+          <textarea data-template>
+          #### Path to Ruby and Solargraph
+          ```bash
+          # Enter this commands in the terminal
+          # then put the output in the settings.json
+          which ruby
+          which solargraph
           ```
           </textarea>
         </section>
