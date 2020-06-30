@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/reveal.css" />
+    <link rel="stylesheet" href="../assets/css/theme/simple.css" />
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../assets/lib/css/zenburn.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+      .reveal section img {
+        border: none;
+        background: none;
+        box-shadow: none;
+      }
+
+      .flex {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
+      .reveal h1,
+      .reveal h2,
+      .reveal h3,
+      .reveal h4,
+      .reveal h5,
+      .reveal h6,
+      .reveal p {
+        font-family: 'Noto Sans', sans-serif;
+      }
+    </style>
+    <title>jQuery</title>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-background-color="#aecde4" data-markdown>
+          <textarea data-template>
+            [![jQuery Logo](https://upload.wikimedia.org/wikipedia/en/9/9e/JQuery_logo.svg)](https://jquery.com/)
+          </textarea>
+        </section>
+
+        <section data-background-color="#aecde4" data-markdown>
+          <textarea data-template>
+            What is jQuery?
+
+            JavaScript before jQuery
+
+            jQuery in 2020
+
+            jQuery Code
+          </textarea>
+        </section>
+
+        <section data-background-color="#aecde4" data-markdown>
+          <textarea data-template>
+            __What is jQuery?__
+
+            JavaScript before jQuery
+
+            jQuery in 2020
+
+            jQuery Code
+          </textarea>
+        </section>
+
+        <section data-background-color="#aecde4" data-markdown>
+          <textarea data-template>
+            ![jQuery Logo](https://upload.wikimedia.org/wikipedia/en/9/9e/JQuery_logo.svg)
+
+            jQuery is a library for JavaScript.
+
+            It can do many things including manage events, animations and make the DOM easier to manipulate.
+
+            With plugins, jQuery can be extended to do much more.
+          </textarea>
+        </section>
+
+        <section data-background-color="#aecde4" data-markdown>
+          <textarea data-template>
+            What is jQuery?
+
+            __JavaScript before jQuery__
+
+            jQuery in 2020
+
+            jQuery Code
+          </textarea>
+        </section>
+
+        <section data-background-color="#fff">
+          <div class="flex">
+            <img src="images/jquery.png" alt="jQuery logo" width="300px" />
+            <p>2006</p>
+          </div>
+          <div class="flex">
+            <div>
+              <img src="images/rails.png" alt="Ruby on Rails logo" width="200px" />
+              <p>2004</p>
+            </div>
+            <div>
+              <img src="images/django.png" alt="Django logo" width="200px" />
+              <p>2005</p>
+            </div>
+            <div>
+              <img src="images/wordpress.png" alt="Wordpress logo" width="200px" />
+              <p>2003</p>
+            </div>
+          </div>
+          <div class="flex">
+            <div>
+              <img src="images/angular.png" alt="Angular logo" width="200px" />
+              <p>2010 (v1), 2016</p>
+            </div>
+            <div>
+              <img src="images/react.png" alt="React logo" width="200px" />
+              <p>2013</p>
+            </div>
+            <div>
+              <img src="images/vue.png" alt="Vue logo" width="200px" />
+              <p>2013</p>
+            </div>
+          </div>
+        </section>
+
+        <section data-background-color="#aecde4" data-markdown>
+          <textarea data-template>
+            ![](https://johnresig.com/files/jeresig-2016.200.jpg)
+
+            [An article from John Resig, creator of jQuery, about JavaScript selectors in 2005](https://johnresig.com/blog/selectors-in-javascript/)
+
+            [Easy Input CSS Rules (2006)](https://johnresig.com/blog/easy-input-css-rules/)
+          </textarea>
+        </section>
+
+        <section data-background-color="#aecde4" data-markdown>
+          <textarea data-template>
+            Very old JS
+
+            ```javascript
+            Behaviour.register({
+              'b.someclass' : function(e){
+                e.onclick = function(){
+                  alert(this.innerHTML);
+                }
+              },
+              '#someid u' : function(e){
+                e.onmouseover = function(){
+                  this.innerHTML = "BLAH!";
+                }
+              }
+            });
+            ```
+          </textarea>
+        </section>
+
+        <section data-background-color="#aecde4" data-markdown>
+          <textarea data-template>
+            Early jQuery
+
+            ```javascript
+            // jQuery
+            $('b.someclass').bind('click',function(){
+              alert(this.innerHTML);
+            });
+            
+            $('#someid u').bind('mouseover',function(){
+              this.innerHTML = 'BLAH!';
+            });
+            ```
+          </textarea>
+        </section>
+
+        <section data-background-color="#aecde4" data-markdown>
+          <textarea data-template>
+            Modern JS
+
+            ```javascript
+            // modern JS
+            document.querySelector('.b.someclass').
+              addEventListener('click', () => {
+                alert(this.innerHTML);
+              }
+            );
+
+            document.querySelector('#someid u').
+              addEventListener('mouseover', () => {
+                this.innerHTML = 'BLAH!';
+              }
+            );
+            ```
+          </textarea>
+        </section>
+
+        <section data-background-color="#aecde4" data-markdown>
+          <textarea data-template>
+            What is jQuery?
+
+            JavaScript before jQuery
+
+            __jQuery in 2020__
+
+            jQuery Code
+          </textarea>
+        </section>
+
+        <section data-background-color="#aecde4" data-markdown>
+          <textarea data-template>
+            ### Popularity
+
+            By percentage of websites using it
+
+            2015  | 2017  | 2018  | 2019  | 2020
+            ----- | ----- | ----- | ----- | -----
+            62.1% | 69.2% | 78%   | 80%   | 74.4%
+
+            > (Numbers from [Wikipedia](https://en.wikipedia.org/wiki/JQuery#Popularity), but source is reliable)
+          </textarea>
+        </section>
+
+        <section data-background-color="#aecde4" data-markdown>
+          <textarea data-template>
+            ### [You Might Not Need jQuery](http://youmightnotneedjquery.com/)
+          </textarea>
+        </section>
+
+        <section data-background-color="#aecde4" data-markdown>
+          <textarea data-template>
+            ## Alternative
+
+            <a href="https://zeptojs.com/">
+              <img src="https://zeptojs.com/logo.png" alt="Zepto.js" width="500px">
+            </a>
+            
+            - \+ Smaller (9.6k vs 30.16k)
+            - \+ Modular
+            - \- Smaller community
+            - \- No plugins
+          </textarea>
+        </section>
+
+        <section data-background-color="#aecde4" data-markdown>
+          <textarea data-template>
+            What is jQuery?
+
+            JavaScript before jQuery
+
+            jQuery in 2020
+
+            __jQuery Code__
+          </textarea>
+        </section>
+
+        <section data-background-color="#aecde4" data-markdown>
+          <textarea data-template>
+            ### Fetch requests
+
+            ```javascript
+            $.ajax({
+              method: 'GET'
+              dataType: 'json',
+              url: url,
+            })
+            .done(function(data) { ... })
+            .fail(function(data) { ... })
+            .always(function(data) { ... });
+            ```
+          </textarea>
+        </section>
+
+        <section data-background-color="#aecde4" data-markdown>
+          <textarea data-template>
+            ### Animation
+
+            ```javascript
+            $('#button').click(function() {
+              $('#el').animate({
+                opacity: 0.25,
+                left: "+=50",
+                height: "toggle",
+                // any css property 
+              }, 5000);
+            });
+            ```
+          </textarea>
+        </section>
+
+        <section data-background-color="#aecde4" data-markdown>
+          <textarea data-template>
+            ### Event listeners
+
+            ```javascript
+            .click()
+            .mousedown()
+            .mouseenter()
+            .mouseover()
+            .keydown()
+            .load()
+            .scroll()
+            .off() // removes event listeners
+            ```
+          </textarea>
+        </section>
+
+        <section data-background-color="#aecde4" data-markdown>
+          <textarea data-template>
+            ### Insert elements on the DOM
+
+            ```javascript
+            $('div').add('p').text('Hello!');
+            ```
+          </textarea>
+        </section>
+
+        <section data-background-color="#aecde4" data-markdown>
+          <textarea data-template>
+            ### CSS properties
+
+            ```javascript
+            $('div').css('border', '2px solid red');
+            ```
+          </textarea>
+        </section>
+
+        <section data-background-color="#aecde4" data-markdown>
+          <textarea data-template>
+            ## Final Thoughts
+          </textarea>
+        </section>
+      </div>
+    </div>
+    <script src="../assets/js/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <!-- <script src="../assets/plugin/markdown/marked.js"></script>
+    <script src="../assets/plugin/markdown/markdown.js"></script> -->
+    <script>
+      Reveal.initialize({
+        controls: false,
+        slideNumber: false,
+        hash: true,
+        mouseWheel: true,
+        width: 960,
+        height: 800,
+
+        dependencies: [
+          {
+            src: '../assets/plugin/markdown/marked.js',
+            condition: function () {
+              return !!document.querySelector('[data-markdown]');
+            },
+          },
+          {
+            src: '../assets/plugin/markdown/markdown.js',
+            condition: function () {
+              return !!document.querySelector('[data-markdown]');
+            },
+          },
+          { src: '../assets/plugin/highlight/highlight.js', async: true },
+          { src: '../assets/plugin/search/search.js', async: true },
+          { src: '../assets/plugin/zoom-js/zoom.js', async: true },
+          { src: '../assets/plugin/notes/notes.js', async: true },
+        ],
+      });
+    </script>
+  </body>
+</html>
