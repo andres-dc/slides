@@ -148,18 +148,17 @@
             Very old JS
 
             ```javascript
-            Behaviour.register({
-              'b.someclass' : function(e){
-                e.onclick = function(){
-                  alert(this.innerHTML);
-                }
-              },
-              '#someid u' : function(e){
-                e.onmouseover = function(){
-                  this.innerHTML = "BLAH!";
+            function appendInputTypeClasses() {
+              if ( !document.getElementsByTagName ) return;
+              var inputs = document.getElementsByTagName('input');
+              var inputLen = inputs.length;
+              for ( i=0; i < inputLen; i++ ) {
+                if ( inputs[i].getAttribute('type') ) {
+                  inputs[i].className += ' '+
+                    inputs[i].getAttribute('type');
                 }
               }
-            });
+            }
             ```
           </textarea>
         </section>
@@ -169,35 +168,9 @@
             Early jQuery
 
             ```javascript
-            // jQuery
-            $('b.someclass').bind('click',function(){
-              alert(this.innerHTML);
+            $("input").each(function(){
+              $(this).addClass(this.type);
             });
-            
-            $('#someid u').bind('mouseover',function(){
-              this.innerHTML = 'BLAH!';
-            });
-            ```
-          </textarea>
-        </section>
-
-        <section data-background-image="images/bg1.jpg" data-markdown>
-          <textarea data-template>
-            Modern JS
-
-            ```javascript
-            // modern JS
-            document.querySelector('.b.someclass').
-              addEventListener('click', () => {
-                alert(this.innerHTML);
-              }
-            );
-
-            document.querySelector('#someid u').
-              addEventListener('mouseover', () => {
-                this.innerHTML = 'BLAH!';
-              }
-            );
             ```
           </textarea>
         </section>
